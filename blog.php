@@ -16,7 +16,7 @@ include ('includes/config.php');
 </style>
 <div class="row">
 	<div class="col-md-12" id="heading2">
-    <h4 id="blogtitle">Showing The Latest Blog Posts</h4>
+    <h4 id="blogtitle">Showing The Latest 10 Blog Posts</h4>
   	</div>
 </div>
 </br>
@@ -75,7 +75,7 @@ include ('includes/config.php');
 	</div>
 		<div id="blog">
 		<?php
-     $sql5 = "SELECT * FROM `blog_worldtour` ORDER BY id DESC";
+     $sql5 = "SELECT * FROM `blog_worldtour` ORDER BY id DESC LIMIT 10";
         $result = $conn->query($sql5);
         while($row2 = $result->fetch_assoc())
         {
